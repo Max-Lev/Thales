@@ -1,0 +1,35 @@
+<form class="container" [formGroup]="weatherForm" (ngSubmit)="search()">
+
+  <mat-card class="weather-card">
+
+    <div class="card-title">
+      <span>Weather</span>
+    </div>
+
+    <div class="fields-container">
+      <mat-form-field class="action-select">
+
+        <mat-label>City...</mat-label>
+
+        <mat-select formControlName="citiesCntrl">
+          <mat-option *ngFor="let city of citiesList" [value]="city.id">
+            {{city.name}}
+          </mat-option>
+        </mat-select>
+
+      </mat-form-field>
+
+
+      <div class="search-action-btn">
+        <button type="submit" mat-button>Update</button>
+      </div>
+    </div>
+
+    <ng-container *ngIf="weatherInfo">
+      <app-weather-info [weatherInfo]="weatherInfo"></app-weather-info>
+    </ng-container>
+
+
+  </mat-card>
+
+</form>

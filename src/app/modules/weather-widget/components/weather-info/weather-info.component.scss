@@ -1,0 +1,32 @@
+:host {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    background-image: url('https://mocah.org/uploads/posts/124344-miui-8-weather-background-minimal-hd.png');
+    background-position: center;
+    background-size: contain;
+
+    .info-container {
+        display: flex;
+        flex: 1;
+        padding: 1rem;
+        flex-direction: column;
+
+        .title,
+        .content,
+        .info-footer {
+            padding: 2rem;
+            box-sizing: border-box;
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            font-weight: bold;
+        }
+
+        .info-footer {
+            justify-content: space-between;
+            flex-direction: row;
+        }
+
+    }
+}

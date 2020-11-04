@@ -1,0 +1,50 @@
+:host {
+    display: flex;
+    width: 100%;
+    place-content: center;
+    // max-height: 50%;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        max-width: 50%;
+        flex: 1;
+        align-items: center;
+        justify-content: center;
+
+        .fields-container {
+            display: flex;
+            flex: 1;
+            flex-direction: row;
+            padding: 1rem;
+
+            .action-select,
+            .search-action-btn {
+                display: flex;
+                flex: 1;
+                align-content: center;
+                justify-content: center;
+            }
+        }
+
+    }
+}
+
+:host {
+    ::ng-deep {
+        .weather-card {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            width: 100%;
+
+            .card-title {
+                padding: 1rem;
+                text-align: center;
+                background-color: lightgrey;
+                font-weight: bold;
+            }
+        }
+    }
+}
